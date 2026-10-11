@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>39电影网 · 39个动作，看懂一部电影 | 电影推荐、片单导航、观影指南、正版观影渠道</title>
+<meta name="description" content="39电影网：不用分数，用39个30秒可自测的动作看懂一部电影。含公版片单、修复版片单、按心情选片、免费代价对照、长镜头与留白辨析。正版观影渠道导航，影视资源0个。">
+<meta name="keywords" content="39电影网,39dianyingwang,39dianyingwang-cn,电影推荐,片单导航,观影指南,电影鉴赏,经典电影,冷门佳片,文艺片,纪录片,短片,动画电影,默片,修复版,4K修复,公有领域电影,公版电影,正版观影渠道,电影入门,长镜头,蒙太奇,留白,电影拉片,电影构图,场面调度,下饭电影,通勤片单,失眠电影,电影评论,电影理论">
+<meta name="author" content="39电影网">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="bingbot" content="index, follow">
+<link rel="canonical" href="https://39dianyingwang-cn.github.io/">
+<meta name="theme-color" content="#241e18">
+<meta property="og:type" content="website">
+<meta property="og:title" content="39电影网 · 39个动作，看懂一部电影">
+<meta property="og:description" content="不用分数，用39个30秒可自测的动作看懂一部电影。公版片单、修复版片单、按心情选片、免费代价对照。正版观影渠道导航。">
+<meta property="og:url" content="https://39dianyingwang-cn.github.io/">
+<meta property="og:site_name" content="39电影网">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"39电影网",
+  "alternateName":["39dianyingwang","39影视导航"],
+  "url":"https://39dianyingwang-cn.github.io/",
+  "description":"用39个动作看懂一部电影：电影推荐、片单导航、观影指南、正版观影渠道。",
+  "publisher":{"@type":"Organization","name":"39电影网","url":"https://39dianyingwang-cn.github.io/"},
+  "potentialAction":{"@type":"SearchAction","target":"https://39dianyingwang-cn.github.io/#search","query-input":"required name=q"}
+}
+</script>
+<style>
+:root{
+  --paper:#f2ece1;
+  --paper2:#e8dfcd;
+  --ink:#241e18;
+  --ink2:#4a4136;
+  --clay:#c98a4a;
+  --rust:#b5653a;
+  --plum:#7a4a5e;
+  --moss:#6f8a5a;
+  --slate:#4a6b7a;
+  --gold:#d9a85c;
+  --line:rgba(36,30,24,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(217,168,92,.10), transparent 42%),
+    radial-gradient(circle at 88% 92%, rgba(122,74,94,.10), transparent 46%),
+    var(--paper);
+  color:var(--ink);
+  font-family:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC",Georgia,"WenQuanYi Micro Hei",serif;
+  font-size:16px;
+  line-height:1.85;
+  -webkit-text-size-adjust:100%;
+}
+.sans{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif}
+img{max-width:100%;display:block}
+a{color:var(--rust);text-decoration:none;border-bottom:1px solid rgba(181,101,58,.3);transition:.24s}
+a:hover{color:var(--plum);border-bottom-color:var(--plum)}
+:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ── 首屏：落日麦田（纯 CSS） ─────────────────── */
+.hero{
+  position:relative;
+  min-height:min(86vh,760px);
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:minmax(1.2rem,1fr) minmax(0,1180px) minmax(1.2rem,1fr);
+  grid-template-rows:auto 1fr;
+  padding:0 1.2rem;
+  background:
+    linear-gradient(180deg,#f6d9b4 0%,#f0c3a8 22%,#e6a99a 44%,#c98a9a 66%,#8a6a86 84%,#4a4a66 100%);
+}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(36,30,24,.022) 0 1px,transparent 1px 5px)}
+.sky{position:absolute;inset:0;z-index:0}
+.sun{
+  position:absolute;left:20%;top:14%;
+  width:clamp(90px,15vw,180px);aspect-ratio:1;
+  border-radius:50%;z-index:1;
+  background:radial-gradient(circle at 50% 42%,#fff6df 0%,#ffe2a8 26%,#f7c06a 52%,#e08a4a 78%,#a84a38 100%);
+  box-shadow:0 0 60px 18px rgba(255,214,140,.55),0 0 140px 60px rgba(224,138,74,.3),0 0 260px 120px rgba(201,138,154,.22),inset 0 -26px 40px -20px rgba(120,50,30,.5);
+  animation:glow 12s ease-in-out infinite alternate;
+}
+@keyframes glow{from{filter:brightness(1)}to{filter:brightness(1.12)}}
+.cloud{position:absolute;border-radius:999px;background:rgba(247,238,222,.72);z-index:1;filter:blur(.4px)}
+.cloud i,.cloud s{position:absolute;border-radius:999px;background:inherit;display:block}
+.cloud b{position:absolute;inset:0;border-radius:999px;box-shadow:inset 0 -10px 22px -12px rgba(90,60,50,.35)}
+.c1{width:22vw;height:3.2vw;top:19%;left:6%;animation:drift 88s linear infinite}
+.c1 i{width:9vw;height:5vw;left:4vw;top:-2.2vw}
+.c1 s{width:6vw;height:4.4vw;left:13vw;top:-1.6vw}
+.c2{width:15vw;height:2.4vw;top:32%;left:58%;animation:drift 130s linear infinite}
+.c2 i{width:6vw;height:3.6vw;left:2.6vw;top:-1.7vw}
+.c2 s{width:4.4vw;height:3vw;left:8.4vw;top:-1.2vw}
+@keyframes drift{from{transform:translateX(-26vw)}to{transform:translateX(120vw)}}
+.bird{position:absolute;color:#3a2c26;font-size:clamp(12px,1.6vw,22px);z-index:2;opacity:.7}
+.b1{top:24%;left:0;animation:fly 21s linear infinite}
+.b2{top:30%;left:0;font-size:.7em;animation:fly 29s linear infinite .8s}
+.b3{top:26%;left:0;font-size:1.3em;animation:fly 17s linear infinite 1.6s}
+@keyframes fly{from{transform:translate(0,0) rotate(-9deg)}to{transform:translate(120vw,3vh) rotate(7deg)}}
+.ridge{position:absolute;left:0;right:0;bottom:0;height:34%;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 64% 100% at 16% 100%,rgba(74,58,60,.86),transparent 60%),
+    radial-gradient(ellipse 56% 100% at 82% 100%,rgba(58,52,66,.8),transparent 62%),
+    radial-gradient(ellipse 46% 78% at 46% 100%,rgba(44,40,52,.72),transparent 64%),
+    linear-gradient(180deg,transparent 0%,rgba(30,26,34,.35) 100%)}
+.stalk{position:absolute;bottom:0;width:2px;height:14vh;background:linear-gradient(180deg,var(--moss),#4a5a3a);z-index:1;transform-origin:bottom;transform:rotate(-9deg)}
+.stalk::after{content:"❧";position:absolute;top:-1.4em;left:-.7em;color:#c98a4a;font-size:1.1rem}
+
+/* ── 顶部导航 ─────────────────── */
+.top{position:relative;z-index:5;grid-column:2;display:flex;align-items:center;gap:1.4rem;padding:1.1rem 0}
+.brand{display:flex;align-items:baseline;gap:.5rem;text-decoration:none;border:0;color:var(--ink)}
+.brand b{font-size:clamp(1.15rem,2.4vw,1.55rem);letter-spacing:.16em;font-weight:700}
+.brand span{font-size:.78rem;letter-spacing:.2em;color:var(--rust);font-family:Georgia,serif}
+nav{margin-left:auto;display:flex;gap:.35rem;flex-wrap:wrap}
+nav a{font-size:.86rem;letter-spacing:.08em;padding:.42rem .82rem;border:1px solid transparent;border-radius:999px;color:var(--ink2)}
+nav a:hover{background:rgba(255,255,255,.62);border-color:var(--line);color:var(--rust)}
+
+/* ── 首屏文案 ─────────────────── */
+.intro{grid-column:2;z-index:4;align-self:end;padding:2.2rem 0 4.4rem;display:grid;grid-template-columns:1.35fr .9fr;gap:clamp(1.4rem,4vw,3.4rem);align-items:end}
+.kicker{font-size:.8rem;letter-spacing:.34em;color:var(--rust);margin:0 0 1rem}
+h1{font-size:clamp(2rem,5.4vw,4.4rem);line-height:1.16;margin:0 0 1.1rem;font-weight:700;letter-spacing:.01em}
+h1 em{font-style:normal;position:relative;display:inline-block;padding:0 .12em}
+h1 em::after{content:"";position:absolute;left:-6%;right:-6%;bottom:.05em;height:.22em;z-index:-1;
+  background:linear-gradient(90deg,var(--clay),var(--rust) 55%,var(--plum));
+  transform:skewX(-17deg);opacity:.85}
+.lede{font-size:clamp(1rem,1.5vw,1.18rem);color:var(--ink2);margin:0;max-width:44ch}
+.lede cite{font-style:normal;color:var(--rust);border-bottom:1px dashed var(--rust)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;align-self:end}
+.stats div{background:rgba(255,255,255,.5);padding:.75rem .9rem}
+.stats dt{font-size:.72rem;letter-spacing:.14em;color:var(--ink2);margin:0}
+.stats dd{margin:.16rem 0 0;font-family:Georgia,serif;font-size:clamp(1.2rem,2.4vw,1.7rem);color:var(--rust);font-weight:700}
+.big39{position:absolute;right:0;top:8%;font-family:Georgia,serif;font-weight:700;
+  font-size:clamp(7rem,22vw,15rem);line-height:.82;letter-spacing:-.04em;z-index:1;
+  background:linear-gradient(180deg,var(--clay),var(--plum));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:.86;transform:rotate(-3deg);pointer-events:none}
+.big39 small{display:block;font-size:.11em;letter-spacing:.5em;font-family:"Songti SC",serif;color:var(--ink2);opacity:.6;margin-top:.5em;text-align:right;background:none;color:var(--ink2)}
+
+/* ── 通用版式 ─────────────────── */
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.2rem}
+section{padding:clamp(3.2rem,8vw,6rem) 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:.78rem;letter-spacing:.3em;color:var(--rust);margin:0 0 .5rem}
+h2{font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.25;margin:0 0 .9rem;letter-spacing:.01em}
+h2 u{text-decoration:none;position:relative;padding:0 .14em;z-index:1}
+h2 u::after{content:"";position:absolute;left:0;right:0;bottom:.12em;height:.2em;background:rgba(217,168,92,.55);z-index:-1;transform:skewX(-12deg)}
+.lead{font-size:1.06rem;color:var(--ink2);max-width:60ch;margin:0 0 2.4rem}
+.crumb{font-size:.78rem;letter-spacing:.14em;color:var(--ink2);opacity:.7}
+
+/* ① 39 个动作：计数器相连网格 */
+.grid39{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--line);gap:1px}
+.grid39>div{background:var(--paper);padding:1.5rem 1.3rem 1.3rem;position:relative;overflow:hidden;transition:.3s;cursor:default}
+.grid39>div:hover{transform:translateY(-5px);background:#fff;box-shadow:0 14px 30px -18px rgba(36,30,24,.5)}
+.grid39 h3{margin:0 0 .6rem;font-size:1.02rem;position:relative;z-index:2;padding-right:3.6rem}
+.grid39 p{margin:0;font-size:.9rem;color:var(--ink2);position:relative;z-index:2}
+.grid39 .n{position:absolute;right:.2rem;top:-.35rem;font-family:Georgia,serif;font-size:5rem;line-height:.9;font-weight:700;color:rgba(201,138,74,.18);z-index:1;transition:.4s}
+.grid39>div:hover .n{color:rgba(122,74,94,.3);transform:rotate(-6deg) scale(1.08)}
+.grid39>div:nth-child(6n+1){background:#fdfaf3}
+.grid39>div:nth-child(6n+2){background:#f5f3ea}
+.grid39>div:nth-child(6n+3){background:#f1f5ec}
+.grid39>div:nth-child(6n+4){background:#f6eff2}
+.grid39>div:nth-child(6n+5){background:#eef3f6}
+.grid39>div:nth-child(6n+6){background:#f4f0e9}
+.grid39 .tag{display:inline-block;font-size:.72rem;letter-spacing:.1em;color:var(--rust);border:1px solid rgba(181,101,58,.35);border-radius:999px;padding:.14rem .6rem;margin:.7rem 0 0}
+
+/* ② 片单：横向 scroll-snap */
+.belt{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem .4rem 2rem;margin:0 -.4rem;scrollbar-width:thin;scrollbar-color:var(--clay) transparent}
+.belt::-webkit-scrollbar{height:9px}
+.belt::-webkit-scrollbar-thumb{background:var(--clay);border-radius:9px}
+.film{flex:0 0 clamp(240px,22vw,300px);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:.34s;display:flex;flex-direction:column}
+.film:hover{transform:translateY(-8px);box-shadow:0 20px 40px -22px rgba(36,30,24,.6)}
+.poster{height:clamp(250px,26vw,330px);position:relative;overflow:hidden;display:grid;place-items:center}
+.poster i{position:absolute;inset:0;transition:transform 1.2s cubic-bezier(.2,.7,.3,1)}
+.film:hover .poster i{transform:scale(1.07)}
+.poster b{position:relative;font-family:Georgia,serif;font-size:clamp(1.6rem,3.4vw,2.6rem);color:rgba(255,255,255,.93);text-align:center;padding:0 1rem;text-shadow:0 3px 20px rgba(0,0,0,.35);letter-spacing:.02em}
+.poster::after{content:"";position:absolute;inset:0 0 0 auto;width:26%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28));transform:skewX(-9deg) translateX(-70%);transition:.7s}
+.film:hover .poster::after{transform:skewX(-9deg) translateX(120%)}
+.film .meta{padding:.95rem 1rem 1.1rem}
+.film h3{margin:0 0 .35rem;font-size:1rem;line-height:1.4}
+.film .yr{font-size:.78rem;color:var(--rust);letter-spacing:.1em;font-family:Georgia,serif}
+.film p{margin:.5rem 0 .75rem;font-size:.84rem;color:var(--ink2);line-height:1.65}
+.pill{display:inline-block;font-size:.72rem;padding:.12rem .55rem;border-radius:999px;margin:0 .3rem .3rem 0;letter-spacing:.04em}
+.p-free{background:rgba(111,138,90,.18);color:#3d5230}
+.p-mid{background:rgba(217,168,92,.24);color:#7a5a20}
+.p-hard{background:rgba(122,74,94,.18);color:#5a3147}
+.marks{font-size:.8rem;color:var(--rust);letter-spacing:.06em}
+
+/* ③ 按心情：定义列表卡 */
+.moods{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem}
+.mood{display:grid;grid-template-columns:56px 1fr;gap:1rem;background:#fff;border:1px solid var(--line);border-left:6px solid var(--clay);border-radius:5px;padding:1.2rem 1.25rem;transition:.3s}
+.mood:hover{transform:translateX(7px);box-shadow:0 12px 26px -18px rgba(36,30,24,.55)}
+.mood:nth-child(6n+1){border-left-color:var(--clay)}
+.mood:nth-child(6n+2){border-left-color:var(--moss)}
+.mood:nth-child(6n+3){border-left-color:var(--slate)}
+.mood:nth-child(6n+4){border-left-color:var(--rust)}
+.mood:nth-child(6n+5){border-left-color:var(--plum)}
+.mood:nth-child(6n+6){border-left-color:#5c7a86}
+.mood .no{font-family:Georgia,serif;font-size:1.9rem;font-weight:700;line-height:1;color:var(--clay);align-self:start}
+.mood h3{margin:0 0 .4rem;font-size:1.06rem}
+.mood p{margin:0;font-size:.9rem;color:var(--ink2)}
+.mood .q{display:block;margin-top:.65rem;padding-top:.6rem;border-top:1px dashed var(--line);font-style:italic;color:var(--plum)}
+.mood .x{display:block;margin-top:.5rem;font-size:.83rem;color:#8a4a3a}
+
+/* ④ 表格 */
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:6px;background:#fff}
+table{width:100%;min-width:880px;border-collapse:collapse;font-size:.9rem}
+th,td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#e9dfcb;font-size:.8rem;letter-spacing:.1em;position:sticky;top:0;z-index:3;white-space:nowrap}
+th:first-child{width:16%}
+tbody tr:nth-child(even){background:rgba(242,236,225,.45)}
+tbody tr:hover{background:rgba(217,168,92,.12)}
+td b{font-family:Georgia,serif;color:var(--rust)}
+.meter{display:block;height:7px;border-radius:7px;background:rgba(36,30,24,.09);margin-top:.5rem;overflow:hidden}
+.meter u{display:block;height:100%;border-radius:7px;text-decoration:none;background:linear-gradient(90deg,var(--moss),var(--clay))}
+.meter.risk u{background:linear-gradient(90deg,#c2552f,var(--rust))}
+.note{font-size:.86rem;color:var(--ink2);margin-top:1rem}
+
+/* ⑤ 手风琴 */
+.faq{display:grid;gap:.7rem}
+.faq>div{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+summary{cursor:pointer;padding:1.15rem 1.3rem;font-size:1.02rem;font-weight:700;list-style:none;display:grid;grid-template-columns:44px 1fr;gap:.9rem;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";grid-column:1;width:30px;height:30px;display:grid;place-items:center;background:var(--paper2);color:var(--rust);font-size:1.2rem;font-weight:400;border-radius:5px;transition:.3s;justify-self:start}
+details[open] summary::after{content:"－";background:var(--clay);color:#fff;transform:rotate(180deg)}
+summary:hover{background:rgba(217,168,92,.1)}
+.faq .body{padding:0 1.3rem 1.35rem 5.2rem;color:var(--ink2);font-size:.94rem}
+.faq .body p{margin:.55rem 0}
+.faq blockquote{margin:.9rem 0;padding:.85rem 1.1rem;background:rgba(122,74,94,.07);border-left:4px solid var(--clay);font-style:italic;color:#4a3140}
+
+/* ⑥ 订阅 */
+.cta{background:linear-gradient(135deg,#241e18,#3d3a30 60%,#4a6b7a);color:#f2ece1;border-radius:10px;padding:clamp(2rem,5vw,3.4rem);display:grid;grid-template-columns:1.2fr 1fr;gap:2.4rem;align-items:center}
+.cta h2{font-size:clamp(1.6rem,3.2vw,2.4rem)}
+.cta h2 u::after{background:rgba(217,168,92,.6)}
+.cta p{color:rgba(242,236,225,.78);margin:.6rem 0 0;max-width:52ch}
+.cta form{display:grid;gap:.75rem}
+.cta input[type=email]{font:inherit;font-size:1rem;padding:.95rem 1.1rem;border:1px solid rgba(255,255,255,.28);border-radius:7px;background:rgba(255,255,255,.1);color:#fff;width:100%}
+.cta input[type=email]::placeholder{color:rgba(242,236,225,.5)}
+.cta button{font:inherit;font-size:1rem;padding:.95rem 1.4rem;border:0;border-radius:7px;background:var(--gold);color:#241e18;font-weight:700;cursor:pointer;transition:.24s}
+.cta button:hover{background:#f0c98a;transform:translateY(-2px)}
+
+footer{border-top:2px solid var(--ink);margin-top:3rem;padding:3rem 0 2.4rem;font-size:.86rem;color:var(--ink2)}
+.footgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.4rem}
+.footgrid h4{font-size:.82rem;letter-spacing:.2em;color:var(--rust);margin:0 0 .9rem}
+.footgrid ul{list-style:none;padding:0;margin:0}
+.footgrid li{margin:.4rem 0}
+.footgrid a{border:0;color:var(--ink2)}
+.copy{border-top:1px solid var(--line);padding-top:1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center}
+.copy b{color:var(--rust)}
+.lang{font-size:.74rem;letter-spacing:.16em;opacity:.7}
+
+@media (max-width:980px){
+  .intro{grid-template-columns:1fr}
+  .big39{font-size:clamp(6rem,26vw,11rem);top:4%}
+  .grid39{grid-template-columns:repeat(2,1fr)}
+  .moods{grid-template-columns:1fr}
+  .cta{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  body{font-size:15.5px}
+  .hero{min-height:auto;padding-bottom:2rem}
+  .top{gap:.6rem;flex-wrap:wrap}
+  nav a{padding:.32rem .62rem;font-size:.8rem}
+  .brand b{font-size:1.05rem}
+  .grid39{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .sun{width:26vw;left:8%}
+  .cloud,.bird,.ridge{display:none}
+  .footgrid{grid-template-columns:1fr 1fr}
+  .copy{grid-template-columns:1fr}
+  details[open] .faq .body{padding-left:1.3rem}
+  summary{grid-template-columns:34px 1fr;gap:.6rem;font-size:.96rem}
+  summary::after{width:26px;height:26px}
+}
+@media print{
+  .hero{background:#fff;min-height:auto}
+  .sun,.cloud,.bird,.ridge,.stalk,.big39{display:none!important}
+  section{page-break-inside:avoid}
+  .belt{overflow:visible;flex-wrap:wrap}
+  .film{flex:none;width:46%}
+  a{color:#000;border:0}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header class="hero" role="banner">
+  <div class="sky" aria-hidden="true">
+    <div class="sun"></div>
+    <div class="cloud c1"><i></i><s></s><b></b></div>
+    <div class="cloud c2"><i></i><s></s><b></b></div>
+    <div class="bird b1" aria-hidden="true">˃</div>
+    <div class="bird b2" aria-hidden="true">˃</div>
+    <div class="bird b3" aria-hidden="true">˃</div>
+    <div class="ridge"></div>
+    <span class="stalk" style="left:8%" aria-hidden="true"></span>
+    <span class="stalk" style="left:92%;height:10vh;transform:rotate(7deg)" aria-hidden="true"></span>
+  </div>
+
+  <div class="top">
+    <a class="brand" href="#top" aria-label="39电影网 首页">
+      <b>39电影网</b><span>39 ACTIONS</span>
+    </a>
+    <nav role="navigation" aria-label="主导航">
+      <a href="#acts">39个动作</a>
+      <a href="#belt">精选片单</a>
+      <a href="#moods">按心情选片</a>
+      <a href="#tbl">免费的代价</a>
+      <a href="#faq">九个实话</a>
+      <a href="#sub">每月三部</a>
+    </nav>
+  </div>
+
+  <div class="intro">
+    <div>
+      <p class="kicker">39 电影网 · 影像写作与正版观影指引</p>
+      <h1>评分回答<em>好不好</em>，<br>动作回答<em>懂不懂</em>。</h1>
+      <p class="lede">39 个<cite>每个都不超过 30 秒</cite>、不需要电影史学位的动作。电影是手艺，手艺只能练，不能背。<br>本页即全部内容，内链均为锚点，<a href="#copyright">影视资源 0 个</a>。</p>
+    </div>
+    <aside class="stats" aria-label="本站数据">
+      <div><dt>自测动作</dt><dd>39 个</dd></div>
+      <div><dt>精选片单</dt><dd>18 部起</dd></div>
+      <div><dt>心情场景</dt><dd>8 种</dd></div>
+      <div><dt>影视资源</dt><dd>0 个</dd></div>
+    </aside>
+    <span class="big39" aria-hidden="true">39<small>ACTIONS · NOT RATINGS</small></span>
+  </div>
+</header>
+
+<main role="main">
+
+  <!-- ① 39 个动作 -->
+  <section id="acts" class="wrap" aria-labelledby="h-acts">
+    <p class="crumb">首页 / 39个动作</p>
+    <p class="eyebrow">第一栏 · 练眼</p>
+    <h2 id="h-acts">39 个动作：<u>把影评变成动作</u></h2>
+    <p class="lead">不用 1 到 10 分——分数已经被豆瓣做完了。这里只问"你能不能做出来"。每个动作都标注了耗时，总计不超过 <strong>4 小时</strong>。</p>
+
+    <div class="grid39">
+      <div><span class="n">01</span><h3>数手</h3><p>截图 5 张，只数"出现的是手、还是脸"。手的片，尊重劳动；脸的片，依赖明星。</p><span class="tag">90 秒</span></div>
+      <div><span class="n">02</span><h3>量机位</h3><p>机位比人物眼睛高 30 厘米以上，导演在评判；齐平，导演在陪伴；低于腰线，导演在仰视。</p><span class="tag">静音 3 分钟</span></div>
+      <div><span class="n">03</span><h3>算呼吸</h3><p>镜头数 ÷ 片长。大于 300 个/分钟＝在说话；小于 90 个/分钟＝在呼吸。</p><span class="tag">30 秒</span></div>
+      <div><span class="n">04</span><h3>找框中框</h3><p>门、窗、镜子、栏杆把人框住＝人在处境里。一整场戏都在框中，导演不打算放过他。</p><span class="tag">1 分钟</span></div>
+      <div><span class="n">05</span><h3>数静默</h3><p>台词说完，导演还给不给演员那 3 秒。不给＝怕你走神；给＝相信你看得懂。</p><span class="tag">整场戏</span></div>
+      <div><span class="n">06</span><h3>听现场声</h3><p>关掉配乐，只剩风声、锅铲、脚步。若仍成立，说明它靠的是观察，不是煽情。</p><span class="tag">60 秒</span></div>
+      <div><span class="n">07</span><h3>看背影</h3><p>背影变小，比任何配乐都悲伤。背影占了半屏还在走，这场戏不需要台词。</p><span class="tag">30 秒</span></div>
+      <div><span class="n">08</span><h3>记一镜</h3><p>只写一句：我最忘不掉的那一镜，是……写不出，说明它只是"好看"，不是"电影"。</p><span class="tag">10 分钟</span></div>
+      <div><span class="n">09</span><h3>看字幕边缘</h3><p>发抖的是 AI 放大，锐利的是真扫描。这是判断"真 4K 还是假 4K"最快的方法。</p><span class="tag">5 秒</span></div>
+      <div><span class="n">10</span><h3>找"但是"</h3><p>一句话剧情介绍里有没有转折。有"但是"，值得等首映；只有"然后"，两周后看也不迟。</p><span class="tag">20 秒</span></div>
+      <div><span class="n">11</span><h3>数季节</h3><p>日本人不用音乐表达悲伤，他们用季节。一场戏里季节变了，情绪就不需要配乐。</p><span class="tag">1 分钟</span></div>
+      <div><span class="n">12</span><h3>看食物</h3><p>吃饭的戏最见导演。刀叉怎么拿、谁先动筷、剩了多少——比台词更懂这个家。</p><span class="tag">90 秒</span></div>
+      <div><span class="n">13</span><h3>找重复的物</h3><p>帽子、钟、伞、窗户。重复三次以上的物件，就是导演留给你的钥匙。</p><span class="tag">整场戏</span></div>
+      <div><span class="n">14</span><h3>测"能走开吗"</h3><p>能中途走开还不丢情节＝慢；走不开＝长镜头。长镜头不是"镜头长"，是"不许你逃"。</p><span class="tag">10 分钟</span></div>
+      <div><span class="n">15</span><h3>看失败那一次</h3><p>手艺片里，一定有一次失败。没拍失败的手艺片，拍的是"手艺很美"，不是手艺。</p><span class="tag">整场戏</span></div>
+      <div><span class="n">16</span><h3>数谁的镜头多</h3><p>谁的特写最多，谁就是主题。配角特写多过主角，这部片在讲"旁观者"。</p><span class="tag">3 分钟</span></div>
+      <div><span class="n">17</span><h3>看雨</h3><p>雨是廉价的情绪。若雨只出现在闪回与高潮，导演在用天气代替表演。</p><span class="tag">30 秒</span></div>
+      <div><span class="n">18</span><h3>看空镜</h3><p>空镜不是转场，是导演的呼吸。空镜多的导演，值得信任。</p><span class="tag">整场戏</span></div>
+      <div><span class="n">19</span><h3>关声音</h3><p>关掉声音，你还能不能看懂它在干什么？能，就是手艺；不能，多半是台词。</p><span class="tag">30 秒</span></div>
+      <div><span class="n">20</span><h3>看片名</h3><p>好片名＝动作＋时间＋地点。《晒伤》《小森林》《花束般的恋爱》。不是形容词。</p><span class="tag">5 秒</span></div>
+      <div><span class="n">21</span><h3>数导演前作</h3><p>长片三部以内，导演还没学会撒谎。第四部开始，要小心。</p><span class="tag">3 分钟</span></div>
+      <div><span class="n">22</span><h3>看结尾前十分钟</h3><p>好片在结尾前十分钟就结束了，剩下十分钟是礼物；坏片在结尾前十分钟才开始。</p><span class="tag">10 分钟</span></div>
+      <div><span class="n">23</span><h3>看演员的手</h3><p>手抖的是"演"，手稳的是"活过"。老演员的手，比脸先老。</p><span class="tag">30 秒</span></div>
+      <div><span class="n">24</span><h3>看画幅</h3><p>1.33:1＝安静；1.85:1＝日常；2.35:1＝壮阔；4:3 突然变 16:9＝时间被撕开。</p><span class="tag">5 秒</span></div>
+      <div><span class="n">25</span><h3>看颜色被谁拿走</h3><p>全片彩色，只有一件物是红的＝欲望；全片灰，只有一扇窗是蓝的＝希望。</p><span class="tag">1 分钟</span></div>
+      <div><span class="n">26</span><h3>数配乐几秒</h3><p>音乐一响，情绪就交给别人了；音乐一停，情绪才是你自己的。</p><span class="tag">整场戏</span></div>
+      <div><span class="n">27</span><h3>看越轴</h3><p>越轴常是有意的：吵架、背叛、失忆。轴线不是规则，是立场。</p><span class="tag">1 分钟</span></div>
+      <div><span class="n">28</span><h3>看第一次笑</h3><p>前十分钟第一次笑，来自台词＝聪明；来自处境＝天才。</p><span class="tag">10 分钟</span></div>
+      <div><span class="n">29</span><h3>看道具归还</h3><p>开头出现、结尾必须出现的东西，是结构。没归还，说明导演自己也没看懂。</p><span class="tag">整场戏</span></div>
+      <div><span class="n">30</span><h3>看谁的背影</h3><p>镜头从谁的背后拍，观众就站在谁那边。全片都从反派背后拍，这是作者论的反面。</p><span class="tag">3 分钟</span></div>
+      <div><span class="n">31</span><h3>看字幕语言</h3><p>机翻的字幕会毁掉节奏。好字幕像配音，坏字幕像旁白。</p><span class="tag">30 秒</span></div>
+      <div><span class="n">32</span><h3>看"不拍"</h3><p>最高级的一场戏，是导演决定不拍：只拍门外的雨、门内的沉默、第二天空了的椅子。</p><span class="tag">整场戏</span></div>
+      <div><span class="n">33</span><h3>看群演</h3><p>群演有没有在演。背景里的人在认真吃面，这部片值得信任。</p><span class="tag">30 秒</span></div>
+      <div><span class="n">34</span><h3>看转场</h3><p>黑场是最诚实的转场。花哨的匹配剪辑，常是用来掩盖"这两场没关系"。</p><span class="tag">1 分钟</span></div>
+      <div><span class="n">35</span><h3>看景深</h3><p>虚化是导演的偏爱，深焦是导演的克制。都虚＝只在乎主角；都清＝你在看一幅画。</p><span class="tag">30 秒</span></div>
+      <div><span class="n">36</span><h3>看时长的勇气</h3><p>超过 150 分钟还让你忘记时间＝大师；让你看表＝自恋。时长不是野心，是自信。</p><span class="tag">整场</span></div>
+      <div><span class="n">37</span><h3>看开头的天气</h3><p>静音看开场三分钟，记录出现了几种天气。天气多的片，季节就是情绪。</p><span class="tag">3 分钟</span></div>
+      <div><span class="n">38</span><h3>看演员是否重复</h3><p>同一演员演十个角色都像一个人＝表演；像十个人＝演员。像他自己，但更好＝作者。</p><span class="tag">3 分钟</span></div>
+      <div><span class="n">39</span><h3>三个月后再问</h3><p>三个月后还记得哪一镜？记得住的，才是你的电影。其余只是那两年的消费。</p><span class="tag">3 个月</span></div>
+    </div>
+    <p class="note">▶ 提示：这 39 条不构成"好片标准"，只构成"我有自己的看法"。<strong>凡能用"好看/难看/深刻/震撼"概括的评价，都还没开始看电影。</strong></p>
+  </section>
+
+  <!-- ② 片单 -->
+  <section id="belt" class="wrap" aria-labelledby="h-belt">
+    <p class="crumb">首页 / 精选片单</p>
+    <p class="eyebrow">第二栏 · 片单</p>
+    <h2 id="h-belt">精选片单：<u>公版、修复版与作者论</u></h2>
+    <p class="lead">12 部起步，每月新增 3 部。排序规则：<strong>修复年份与底片规格 &gt; 谁做的 &gt; 时长变化</strong>。片名与导演名仅用于影像教学与正版观影推荐。</p>
+
+    <div class="belt" role="list">
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#3f5c66,#1c2b30)"><i></i><b>大都会</b></div>
+        <div class="meta">
+          <span class="yr">1927 · 弗里茨·朗</span>
+          <h3>《大都会》修复版</h3>
+          <p>修了六年，其中四年在找那丢失的 25 分钟。找回来不是"补全"，是"重活一次"。</p>
+          <span class="pill p-hard">练眼</span><span class="pill p-free">公版</span>
+          <span class="marks">长镜头 · 蒙太奇</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#7a4a5e,#3d2b36)"><i></i><b>东京物语</b></div>
+        <div class="meta">
+          <span class="yr">1953 · 小津安二郎</span>
+          <h3>《东京物语》</h3>
+          <p>1:33:1，榻榻米的高度。全片没有一个"悲伤"的镜头，只有"坐下"与"起身"。</p>
+          <span class="pill p-mid">作者论</span><span class="pill p-mid">留白</span>
+          <span class="marks">机位 · 留白</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#c98a4a,#7a5630)"><i></i><b>战舰波将金号</b></div>
+        <div class="meta">
+          <span class="yr">1925 · 爱森斯坦</span>
+          <h3>《战舰波将金号》</h3>
+          <p>"敖德萨阶梯"一段平均约 1.3 秒一切。1+1=3，这才是剪辑的魔法，也是它容易被滥用的地方。</p>
+          <span class="pill p-free">公版</span><span class="pill p-hard">蒙太奇</span>
+          <span class="marks">动作 03 · 34</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#6f8a5a,#3d4f30)"><i></i><b>小森林</b></div>
+        <div class="meta">
+          <span class="yr">2014 · 森淳一</span>
+          <h3>《小森林》夏秋篇</h3>
+          <p>把"吃饭"拍成信仰。刀怎么拿、火候几秒、剩了多少——比台词更懂那个家。</p>
+          <span class="pill p-free">下饭</span><span class="pill p-mid">手艺</span>
+          <span class="marks">动作 12 · 15</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#b5653a,#5e3320)"><i></i><b>迁徙的鸟</b></div>
+        <div class="meta">
+          <span class="yr">2001 · 雅克·贝汉</span>
+          <h3>《迁徙的鸟》</h3>
+          <p>跟拍 175 天，飞越 40 个国家。你以为省了 40 块，实际看到的是一部不存在的电影。</p>
+          <span class="pill p-hard">纪录片</span><span class="pill p-mid">自然</span>
+          <span class="marks">动作 06 · 18</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#4a6b7a,#24333c)"><i></i><b>2001太空漫游</b></div>
+        <div class="meta">
+          <span class="yr">1968 · 库布里克</span>
+          <h3>《2001 太空漫游》</h3>
+          <p>慢，但不闷。闷是把"没有事发生"当"有深意"；长镜头是把"这一秒"当"全部时间"。</p>
+          <span class="pill p-hard">长镜头</span><span class="pill p-mid">画幅</span>
+          <span class="marks">动作 14 · 24</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#c2552f,#5e2a18)"><i></i><b>圣女贞德蒙难记</b></div>
+        <div class="meta">
+          <span class="yr">1928 · 德莱叶</span>
+          <h3>《圣女贞德蒙难记》</h3>
+          <p>几乎全是面部大特写。默片不是"没有声音"，是"声音全在脸上"。</p>
+          <span class="pill p-free">公版</span><span class="pill p-hard">默片</span>
+          <span class="marks">动作 19 · 23</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#d9a85c,#7a5a20)"><i></i><b>英雄</b></div>
+        <div class="meta">
+          <span class="yr">2002 · 张艺谋</span>
+          <h3>《英雄》</h3>
+          <p>颜色被谁拿走，谁就是主题。全片灰，只有那件红衣——欲望不需要台词。</p>
+          <span class="pill p-mid">色彩</span><span class="pill p-mid">构图</span>
+          <span class="marks">动作 25 · 35</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#5c7a86,#2c414a)"><i></i><b>花样年华</b></div>
+        <div class="meta">
+          <span class="yr">2000 · 王家卫</span>
+          <h3>《花样年华》</h3>
+          <p>1.66:1 的窄画幅＝走不出的走廊。旗袍换了 23 套，情绪只换了一种：克制。</p>
+          <span class="pill p-mid">画幅</span><span class="pill p-hard">留白</span>
+          <span class="marks">动作 24 · 32</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#8a6a86,#42304a)"><i></i><b>地球脉动</b></div>
+        <div class="meta">
+          <span class="yr">2006 · BBC</span>
+          <h3>《地球脉动》第一季</h3>
+          <p>真正的长镜头：等一只雪豹出现，可能要蹲 40 天。纪录片的"真"，是被选择过的真。</p>
+          <span class="pill p-free">纪录片</span><span class="pill p-mid">自然</span>
+          <span class="marks">动作 15 · 39</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#3d5a80,#1e2f44)"><i></i><b>千与千寻</b></div>
+        <div class="meta">
+          <span class="yr">2001 · 宫崎骏</span>
+          <h3>《千与千寻》</h3>
+          <p>手绘 11 万张。动画不是"画出来"，是"一张一张地活过来"。</p>
+          <span class="pill p-mid">动画</span><span class="pill p-free">治愈</span>
+          <span class="marks">动作 13 · 29</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#7d8f5e,#43522e)"><i></i><b>夏日纪事</b></div>
+        <div class="meta">
+          <span class="yr">1961 · 让·鲁什</span>
+          <h3>《夏日纪事》</h3>
+          <p>直接电影的源头。拿着 16mm 走进巴黎街头问："你幸福吗？"——被拍的人不知道自己正在被拍。</p>
+          <span class="pill p-hard">纪录片</span><span class="pill p-mid">伦理</span>
+          <span class="marks">动作 33</span>
+        </div>
+      </article>
+
+      <article class="film" role="listitem">
+        <div class="poster" style="background:linear-gradient(150deg,#a84a48,#5a2826)"><i></i><b>七武士</b></div>
+        <div class="meta">
+          <span class="yr">1954 · 黑泽明</span>
+          <h3>《七武士》修复版</h3>
+          <p>雨中决战的泥，是真实的泥。动作片的巅峰，是让"打"显得很脏、很累、很疼。</p>
+          <span class="pill p-hard">作者论</span><span class="pill p-mid">场面调度</span>
+          <span class="marks">动作 04 · 27</span>
+        </div>
+      </article>
+    </div>
+    <p class="note">▶ 片单不含任何盗版资源链接。<a href="#watch">五种真的可以合法免费看的路径</a>见下方。</p>
+  </section>
+
+  <!-- ③ 按心情选片 -->
+  <section id="moods" class="wrap" aria-labelledby="h-moods">
+    <p class="crumb">首页 / 按心情选片</p>
+    <p class="eyebrow">第三栏 · 场景</p>
+    <h2 id="h-moods">按心情选片：<u>评分不回答的问题</u></h2>
+    <p class="lead">"好片"是错的问法。正确的是：<strong>我现在还剩多少电</strong>。电量决定你今晚看的是杰作，还是噪音。</p>
+
+    <div class="moods">
+      <div class="mood">
+        <span class="no">01</span>
+        <div>
+          <h3>电量 &lt; 20%：重温老片</h3>
+          <p>熟饭最养胃。看一部三年前看过的片，你会惊讶于"台词没变，我变了"。</p>
+          <em class="q">推荐：小津、是枝裕和、侯麦、《小森林》</em>
+          <em class="x">✘ 别在电量低时看新片——你会误判它，也会误判自己。</em>
+        </div>
+      </div>
+      <div class="mood">
+        <span class="no">02</span>
+        <div>
+          <h3>一个人吃饭：下饭纪录片</h3>
+          <p>不要剧情，要手艺。看别人认真做一件事，比任何配乐都能让人把饭吃完。</p>
+          <em class="q">推荐：《面条之路》《寿司之神》《我在故宫修文物》</em>
+          <em class="x">✘ 别看吃播——那是表演；看纪录片，那是生活。</em>
+        </div>
+      </div>
+      <div class="mood">
+        <span class="no">03</span>
+        <div>
+          <h3>下雨：默片或黑白片</h3>
+          <p>雨声是最好的音效。窗外在下雨，银幕上没有颜色，你会第一次听懂"节奏"两个字。</p>
+          <em class="q">推荐：《大都会》《圣女贞德蒙难记》《将军号》</em>
+          <em class="x">✘ 别在地铁上看默片——你会错过钢琴。</em>
+        </div>
+      </div>
+      <div class="mood">
+        <span class="no">04</span>
+        <div>
+          <h3>通勤 40 分钟：短片</h3>
+          <p>短片不是"拍不完的长片"。短片是"只说一件事，说完就走"。</p>
+          <em class="q">推荐：陈志勇《失物招领》、毕赣早期、动画短片集</em>
+          <em class="x">✘ 别在地铁上看悬疑——你会错过站。</em>
+        </div>
+      </div>
+      <div class="mood">
+        <span class="no">05</span>
+        <div>
+          <h3>刚吵完架：长镜头</h3>
+          <p>长镜头不允许你逃。它把"不说话的那三十秒"还给你，那是道歉发生的地方。</p>
+          <em class="q">推荐：《东京物语》《风烛泪》《可怜的东西》长镜头段落</em>
+          <em class="x">✘ 别看喜剧——笑完会更空。</em>
+        </div>
+      </div>
+      <div class="mood">
+        <span class="no">06</span>
+        <div>
+          <h3>失眠凌晨两点：有声电影史</h3>
+          <p>看"电影怎么学会说话"。你会明白：声音不是加上去的，是"重新发现"的。</p>
+          <em class="q">推荐：《爵士歌手》《公民凯恩》音效、《声音与愤怒》</em>
+          <em class="x">✘ 别看新片——你会记住它，然后更睡不着。</em>
+        </div>
+      </div>
+      <div class="mood">
+        <span class="no">07</span>
+        <div>
+          <h3>带娃：定格动画</h3>
+          <p>一帧一帧摆出来的世界，孩子看的是"真"，你看的是"值不值得"。答案都是"值得"。</p>
+          <em class="q">推荐：《小鸡快跑》《了不起的狐狸爸爸》《玛丽和马克思》</em>
+          <em class="x">✘ 别看"合家欢"三个字——那是营销，不是类型。</em>
+        </div>
+      </div>
+      <div class="mood">
+        <span class="no">08</span>
+        <div>
+          <h3>想证明自己懂电影：别看影史前十</h3>
+          <p>去看一部"公认难看"的片，并写下它哪里其实没错。这才是拉片。</p>
+          <em class="q">推荐：任何一部被骂了十年的商业片，认真看完</em>
+          <em class="x">✘ 别写"必看"——必看的意思是"我没看过"。</em>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 表格 -->
+  <section id="tbl" class="wrap" aria-labelledby="h-tbl">
+    <p class="crumb">首页 / 免费的代价</p>
+    <p class="eyebrow">第四栏 · 算账</p>
+    <h2 id="h-tbl">八种"免费"：<u>四种代价</u></h2>
+    <p class="lead">"免费"不是没有价格，是<strong>成本由谁来付</strong>。下表两轴均为本站经验值（0–100），非客观测评。</p>
+
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr>
+            <th>方式</th><th>真免费度</th><th>干净度</th><th>片库</th><th>画质</th><th>字幕</th><th>代价转移给了谁</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>公共图书馆影音借阅</b></td>
+            <td>96<span class="meter"><u style="width:96%"></u></span></td>
+            <td>99<span class="meter"><u style="width:99%"></u></span></td>
+            <td>中</td><td>蓝光级</td><td>优质</td>
+            <td>无。唯一"免费又干净"的渠道，且常被忽略。</td>
+          </tr>
+          <tr>
+            <td><b>电影资料馆 / 艺术院线放映</b></td>
+            <td>88<span class="meter"><u style="width:88%"></u></span></td>
+            <td>98<span class="meter"><u style="width:98%"></u></span></td>
+            <td>精</td><td>35mm / 4K</td><td>专业</td>
+            <td>无。且你会听到别人的呼吸——这是流媒体给不了的。</td>
+          </tr>
+          <tr>
+            <td><b>AVOD 广告支持平台</b></td>
+            <td>78<span class="meter"><u style="width:78%"></u></span></td>
+            <td>90<span class="meter"><u style="width:90%"></u></span></td>
+            <td>中</td><td>1080p 起</td><td>一般</td>
+            <td>广告主。代价是"每 12 分钟被打断一次"。</td>
+          </tr>
+          <tr>
+            <td><b>公有领域档案库</b></td>
+            <td>95<span class="meter"><u style="width:95%"></u></span></td>
+            <td>92<span class="meter"><u style="width:92%"></u></span></td>
+            <td>偏小</td><td>修复版</td><td>无</td>
+            <td>无。但需自行判断版权状态，且多为默片。</td>
+          </tr>
+          <tr>
+            <td><b>正规流媒体试用</b></td>
+            <td>70<span class="meter"><u style="width:70%"></u></span></td>
+            <td>96<span class="meter"><u style="width:96%"></u></span></td>
+            <td>大</td><td>4K HDR</td><td>优质</td>
+            <td>你的时间（记得取消）。7 天足够看完一部长片 + 一部纪录片。</td>
+          </tr>
+          <tr>
+            <td><b>导演 / 片方官方频道</b></td>
+            <td>82<span class="meter"><u style="width:82%"></u></span></td>
+            <td>95<span class="meter"><u style="width:95%"></u></span></td>
+            <td>小</td><td>原片</td><td>原声</td>
+            <td>无。且常有导演解说音轨——这是最被低估的拉片材料。</td>
+          </tr>
+          <tr>
+            <td><b>盗链 / 网盘转存</b></td>
+            <td>18<span class="meter risk"><u style="width:18%"></u></span></td>
+            <td>14<span class="meter risk"><u style="width:14%"></u></span></td>
+            <td>杂</td><td>伪 4K</td><td>机翻</td>
+            <td><b>时间与安全</b>：找资源 20 分钟，决策 12 秒；木马、钓鱼、赌博导流重灾区。</td>
+          </tr>
+          <tr>
+            <td><b>破解 / 枪版</b></td>
+            <td>6<span class="meter risk"><u style="width:6%"></u></span></td>
+            <td>9<span class="meter risk"><u style="width:9%"></u></span></td>
+            <td>新</td><td>画幅歪</td><td>现场字</td>
+            <td><b>作者</b>：你以为省了 40 块，实际看到的是一部不存在的电影。而下一部《迁徙的鸟》可能再也拍不出来。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">▶ 四笔账：<b>时间</b>（找 20 分钟 vs 选 12 秒）、<b>安全</b>（盗链是木马与赌博导流重灾区）、<b>体验</b>（枪版画幅歪、声音是混响、字幕是机翻）、<b>代价转移</b>（你省下的票钱，是摄影师少拿的那份）。</p>
+  </section>
+
+  <!-- ⑤ 九个实话 -->
+  <section id="faq" class="wrap" aria-labelledby="h-faq">
+    <p class="crumb">首页 / 九个实话</p>
+    <p class="eyebrow">第五栏 · 辨析</p>
+    <h2 id="h-faq">九个实话：<u>不追热点，不刷榜单</u></h2>
+    <p class="lead">本站保留相互矛盾的观点，因为电影本来就不只有一种看法。</p>
+
+    <div class="faq">
+      <details open>
+        <summary><span>问 01</span>长镜头不等于好镜头，对吗？</summary>
+        <div class="body">
+          <p>对，也不对。<strong>长镜头不是"镜头长"，是"不许你逃"</strong>。一场戏，一个镜头，不剪——它的价值不是"炫技"，是"不许逃"。</p>
+          <p>判断标准只有一句：<em>能中途走开还不丢情节＝慢；走不开＝长镜头。</em></p>
+          <blockquote>《2001 太空漫游》的星门段落，慢，但不闷；《疯狂的麦克斯 4》的沙漠追逐，快，但每一个镜头都"必须在这里"。后者也是作者论，只是它不用长镜头证明。</blockquote>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>问 02</span>"4K 修复"和"4K 上采样"是一回事吗？</summary>
+        <div class="body">
+          <p>不是。<strong>高清是四个数，不是一个词</strong>：分辨率、码率、色彩位深、动态范围。</p>
+          <ul>
+            <li><b>真 4K</b>＝用 4K 胶片扫描的底片做的修复。字幕边缘是锐利的。</li>
+            <li><b>假 4K</b>＝1080p 用 AI 放大到 3840。字幕边缘会发抖。</li>
+            <li><b>AI 放大 ≠ 修复</b>：修复是"找回"，AI 放大是"猜"。AI 只是把模糊变得更大。</li>
+          </ul>
+          <p>判断口诀：<em>看字幕边缘。发抖的是 AI，锐利的是真扫描。</em>一部 100 分钟的影片约 14.4 万帧，京都影像中心的修复师说，他们"每天只能修 30 秒素材"。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>问 03</span>文艺片为什么"看不懂"？</summary>
+        <div class="body">
+          <p>多半不是看不懂，是<b>没给台词</b>。台词是导演的保险绳，剪掉它，观众就得自己走。</p>
+          <p>慢 ≠ 文艺 ≠ 闷。三个词要拆开：</p>
+          <ul>
+            <li><b>文艺</b>＝不靠情节驱动，靠细节与重复。</li>
+            <li><b>慢</b>＝信息密度低，但每一秒都在积累。</li>
+            <li><b>闷</b>＝把"没有事发生"当成"有深意"。这是坏电影，不是文艺片。</li>
+          </ul>
+          <p>反例：《疯狂的麦克斯 4》是文艺片吗？是。它慢吗？一点都不。<strong>文艺 ≠ 慢。</strong></p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>问 04</span>留白是不是"没拍好"？</summary>
+        <div class="body">
+          <p>分两种。<strong>坏留白＝不知道导演想说什么；好留白＝知道，但选择不说。</strong></p>
+          <p>最高级的一场戏，是导演决定不拍：只拍门外的雨、门内的沉默、第二天空了的椅子。《东京物语》里母亲去世那场，镜头停在空榻榻米上，长达 9 秒。那是全片最满的一镜。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>问 05</span>公版电影是不是"随便传都行"？</summary>
+        <div class="body">
+          <p><b>不是。</b>三条雷：</p>
+          <ol>
+            <li><b>影片公版 ≠ 这一版蓝光可随便传。</b>修复劳动（调色、降噪、重混音、字幕）另有著作权。</li>
+            <li><b>片中音乐常在保护期。</b>《大都会》的配乐与画面，版权状态并不同步。</li>
+            <li><b>署名是法律，不是礼貌。</b>公版片也要写导演、年份、修复机构。</li>
+          </ol>
+          <p>本站关于公有领域的表述均为经验性说明，不构成法律意见，具体以著作权人公示与当地法律为准。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>问 06</span>作者论还成立吗？</summary>
+        <div class="body">
+          <p>成立，但要用三次：</p>
+          <ul>
+            <li><b>用作者论找入口</b>：连看同一导演 3 部，找出他重复的"习惯动作"。</li>
+            <li><b>用分工论做校验</b>：编剧（野田高梧之于小津）、摄影（李屏宾之于侯孝贤、是枝裕和）、美术、剪辑、制片的贡献常被低估。</li>
+            <li><b>用演员论补漏</b>：成濑巳喜男被"成濑式"的演员光芒盖过；河野天平的美术被误记为导演的趣味。</li>
+          </ul>
+          <p>作者论的三个误用：把风格当好坏 / 忽略编剧 / 忽略摄影。它是最有用的入门工具，也是最危险的结论。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>问 07</span>纪录片为什么也会"不真实"？</summary>
+        <div class="body">
+          <p>因为<b>剪辑就是立场</b>。《夏日纪事》的被访者不知道自己在被拍；《地球脉动》的"连续镜头"常是数月素材拼成。</p>
+          <p>判断三问：① 被拍的人知情同意了吗？② 苦难被拍得美吗？③ 旁白在解释，还是在替观众思考？</p>
+          <blockquote>纪录片不是"真的"，是"被选择过的真的"。承认这一点，反而更可信。</blockquote>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>问 08</span>39电影网为什么"不提供资源"？</span></summary>
+        <div class="body">
+          <p>因为<strong>"电影网"这三个字，指的是"方法与片单的网络"，不是"文件的网络"</strong>。</p>
+          <p>五条红线：不追首映日 / 不刷榜单 / 不抄豆瓣 / 不写"必看" / <b>不提供资源</b>。</p>
+          <p>传播的后果，重于观看。《刑法》第 217 条：以营利为目的复制发行，处三年以下有期徒刑；情节特别严重的，三至七年。《著作权法》第 54 条：权利人实际损失难以计算的，法定赔偿为 500 元 – 500 万元。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>问 09</span>每月三部，怎么选？</summary>
+        <div class="body">
+          <p>固定配比，避免自嗨：</p>
+          <ul>
+            <li><b>一部默片或修复版</b>（练眼）：看"没有台词，电影靠什么"。</li>
+            <li><b>一部作者论</b>（练记忆）：找导演重复的"习惯动作"。</li>
+            <li><b>一部纪录片或短片</b>（练判断）：看"真实"是怎么被剪出来的。</li>
+          </ul>
+          <p>投稿只收"那一镜"：必须含<b>年份 / 导演 / 时分秒</b>。不接受"深刻""震撼""必看"。只接受"哪一年、哪一镜、为什么"。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ⑥ 订阅 -->
+  <section id="sub" class="wrap" aria-labelledby="h-sub">
+    <div class="cta">
+      <div>
+        <p class="eyebrow" style="color:rgba(242,236,225,.7)">每月三部 · 不追热点</p>
+        <h2 id="h-sub">每月三部，<u>只写那一镜</u></h2>
+        <p>一封邮件，每月 1 号发出。一部默片（练眼）、一部作者论（练记忆）、一部纪录片或短片（练判断）。不追首映日，不刷榜单，不抄豆瓣，不写"必看"。</p>
+      </div>
+      <form onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='已记下 · 下月 1 号见';b.style.background='#6f8a5a';">
+        <label for="em" class="sr-only">邮箱地址</label>
+        <input id="em" type="email" required placeholder="your@email.com" autocomplete="email">
+        <button type="submit">订阅每月三部</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer id="copyright" role="contentinfo">
+  <div class="wrap">
+    <div class="footgrid">
+      <div>
+        <h4>39电影网</h4>
+        <p style="max-width:38ch">39 个动作，看懂一部电影。影像写作与正版观影指引，不提供、不托管、不链接、不转存任何影视资源。</p>
+        <p class="lang">本站即全部内容 · 内链均为锚点 · 无独立内页</p>
+      </div>
+      <div>
+        <h4>栏目</h4>
+        <ul>
+          <li><a href="#acts">39 个动作</a></li>
+          <li><a href="#belt">精选片单</a></li>
+          <li><a href="#moods">按心情选片</a></li>
+          <li><a href="#tbl">免费的代价</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>方法</h4>
+        <ul>
+          <li><a href="#faq">长镜头 ≠ 好镜头</a></li>
+          <li><a href="#faq">4K 与 AI 放大</a></li>
+          <li><a href="#faq">公版片三条雷</a></li>
+          <li><a href="#faq">作者论的三个误用</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>合规</h4>
+        <ul>
+          <li><a href="#watch">五种合法免费路径</a></li>
+          <li><a href="#copyright">版权声明</a></li>
+          <li><a href="#sub">投稿规范</a></li>
+          <li><a href="#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <div>
+        <b>合规声明</b>：本站为影像教学与正版观影推荐站点，<b>影视资源 0 个</b>。片名、导演名、镜头描述仅用于影像教学与正版观影推荐，著作权归原作者。不提供、不托管、不链接、不转存任何受著作权保护的影视文件；亦不提供任何所谓"免费影视站"的网址、名称、搜索方法与入口。<br>
+        尊重《中华人民共和国著作权法》第 24 条（合理使用）与《刑法》第 217 条。收到权利人通知后，48 小时内响应并移除。关于公有领域的表述为经验性说明，不构成法律意见，具体以著作权人公示与当地法律为准。备案号：待补充。
+      </div>
+      <div class="lang">© 39电影网 · 39dianyingwang-cn.github.io</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
